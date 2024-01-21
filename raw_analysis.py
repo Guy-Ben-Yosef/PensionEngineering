@@ -90,5 +90,7 @@ if __name__ == '__main__':
 
     # Print the mapper
     print("\nID to Name Mapper")
-    for key, value in id_to_name_mapper.items():
-        print(f"{key.rjust(5)}\t\t{value}")
+    sorted_keys = [str(k) for k in sorted([int(id) for id in id_to_name_mapper.keys()])]
+
+    for key in sorted_keys:
+        print(f"{key.rjust(5)}\t\t{id_to_name_mapper[key]}")
